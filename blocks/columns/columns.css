@@ -1,0 +1,66 @@
+.columns > .row {
+  display: grid;
+  gap: var(--spacing-m);
+  margin-bottom: var(--spacing-xs);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.columns.contained {
+  max-width: var(--grid-container-width);
+  margin: 0 auto;
+}
+
+.columns.contained.middle {
+  align-items: center;
+}
+
+.columns.xxl-spacing {
+  gap: var(--spacing-xxl);
+}
+
+.columns.xl-spacing {
+  gap: var(--spacing-xl);
+}
+
+.columns.l-spacing {
+  gap: var(--spacing-l);
+}
+
+.columns.s-spacing {
+  gap: var(--spacing-s);
+}
+
+.columns.xs-spacing {
+  gap: var(--spacing-xs);
+}
+
+/* Table */
+.columns.columns-table {
+  font-size: 14px;
+}
+
+.columns.columns-table > .row {
+  margin-bottom: 0;
+  padding: var(--spacing-xs) 0;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  border-bottom: 1px solid #D5D5D5;
+  align-items: center;
+}
+
+.columns.columns-table > .row:hover {
+  background-color: #0000000f;
+}
+
+.columns.columns-table > .row:first-child {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* For desktop only */
+@media (min-width:600px) {
+  .columns.columns-table > .row {
+    padding: var(--spacing-xs);
+  }
+}
